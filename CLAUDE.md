@@ -35,14 +35,34 @@ Runs ESLint with Next.js TypeScript configuration.
 ## Architecture
 
 ### App Router Structure
-The project uses Next.js App Router with the following page structure:
+The project uses Next.js App Router with pages organized by product/feature area:
+
+**Centilio Core Pages:**
 - `app/page.tsx` - Root homepage (renders Home component)
 - `app/home/page.tsx` - Home route
 - `app/about/page.tsx` - About page
 - `app/careers/page.tsx` - Careers page
 - `app/contact/page.tsx` - Contact page
 - `app/project/page.tsx` - Project page
-- `app/layout.tsx` - Root layout with Geist font configuration
+- `app/gdpr/page.tsx` - GDPR policy page
+- `app/privacy/page.tsx` - Privacy policy page
+- `app/cookies/page.tsx` - Cookies policy page
+
+**Sign Product Pages:**
+- `app/sign/page.tsx` - Sign product homepage
+- `app/featurepage-sign/page.tsx` - Sign features
+- `app/integrations/page.tsx` - Sign integrations
+- `app/pricing-sign/page.tsx` - Sign pricing
+- `app/contactpagesign/page.tsx` - Sign contact page
+
+**SEO Bot Product Pages:**
+- `app/seo-bot/page.tsx` - SEO Bot homepage
+- `app/seobot-features/page.tsx` - SEO Bot features
+- `app/seobot-integrations/page.tsx` - SEO Bot integrations
+- `app/seobot-contact/page.tsx` - SEO Bot contact page
+
+**Root Layout:**
+- `app/layout.tsx` - Root layout with font configuration and metadata
 
 ### Component Organization
 Components are organized by feature in the `components/` directory:
