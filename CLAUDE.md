@@ -65,17 +65,37 @@ The project uses Next.js App Router with pages organized by product/feature area
 - `app/layout.tsx` - Root layout with font configuration and metadata
 
 ### Component Organization
-Components are organized by feature in the `components/` directory:
+Components are organized by product/feature area in the `components/` directory, mirroring the multi-product structure:
+
+**Centilio Core Components:**
 - `components/home/Home.tsx` - Home page component
 - `components/aboutus/Aboutus.tsx` - About us component
 - `components/careers/Careers.tsx` - Careers listing component
 - `components/careers/CareerForm.tsx` - Career application form
 - `components/contact/Contact.tsx` - Contact component
 - `components/project/Project.tsx` - Project component
+- `components/centilio/CentilioGdprPolicy.tsx` - GDPR policy component
+- `components/centilio/CentilioPrivacyPolicy.tsx` - Privacy policy component
+- `components/centilio/CentilioCookiePolicy.tsx` - Cookie policy component
+
+**Sign Product Components:**
+- `components/sign/SignPage.tsx` - Sign product homepage
+- `components/sign/FeaturePageSign.tsx` - Sign features page
+- `components/sign/IntegrationPageSign.tsx` - Sign integrations page
+- `components/sign/PricingPageSign.tsx` - Sign pricing page
+- `components/sign/ContactPageSign.tsx` - Sign contact page
+
+**SEO Bot Product Components:**
+- `components/seobot/SeoBotHomePage.tsx` - SEO Bot homepage
+- `components/seobot/SeoBotFeaturePage.tsx` - SEO Bot features page
+- `components/seobot/SeoBotIntegrationPage.tsx` - SEO Bot integrations page
+- `components/seobot/SeoBotContactPage.tsx` - SEO Bot contact page
+
+**Shared Layout Components:**
 - `components/layout/Header.tsx` - Header navigation component
 - `components/layout/Footer.tsx` - Footer component
 
-**Important**: Page components in `app/` typically import and render their corresponding feature component from `components/`. This separation keeps business logic in reusable components while pages handle routing.
+**Important**: Page components in `app/` typically import and render their corresponding feature component from `components/`. This separation keeps business logic in reusable components while pages handle routing. The codebase follows a multi-product architecture with three distinct product lines: Centilio (core), Sign, and SEO Bot.
 
 ### Import Aliases
 TypeScript is configured with `@/*` path alias mapping to the root directory:
